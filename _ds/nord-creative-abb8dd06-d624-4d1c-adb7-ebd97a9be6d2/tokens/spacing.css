@@ -1,0 +1,41 @@
+:root{
+--space-1:4px;
+--space-2:8px;
+--space-3:12px;
+--space-4:16px;
+--space-5:24px;
+--space-6:32px;
+--space-7:48px;
+--space-8:64px;
+--space-9:96px;
+--space-10:128px;
+
+/* Social canvases */
+--canvas-post:1080px;
+--canvas-portrait-h:1350px;
+--canvas-story-h:1920px;
+/* Instagram grid crops every tile to 3:4: a 1080x1350 post keeps a centred
+   1013x1350 area, so ~34px is trimmed from EACH side. Nord's 70px margin clears it. */
+--grid-crop-side:34px;
+--grid-safe-w:1013px;
+/* Reels cover: keep text inside a centred 1080x1350 of the 1080x1920 canvas */
+--reel-safe-inset-y:285px;
+/* Story: platform UI occupies the top and bottom bands */
+--story-ui-top:250px;
+--story-ui-bottom:250px;
+/* Cover slide: clearance below the last headline line */
+--cover-headline-floor:200px;
+
+/* Safe margin as a share of canvas width: 6.5% (70px on a 1080 post) */
+--pad-canvas:70px;
+--pad-canvas-story:132px;
+--pad-canvas-tight:48px;
+--pad-card:32px;
+--gutter-grid:24px;
+--max-measure:62ch;
+
+/* Circular control diameters — overridden inside .nord-canvas */
+--control-sm:34px;
+--control-md:46px;
+--control-lg:62px;
+}

@@ -1,0 +1,890 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="_ds/nord-creative-abb8dd06-d624-4d1c-adb7-ebd97a9be6d2/tokens/fonts.css">
+<link rel="stylesheet" href="_ds/nord-creative-abb8dd06-d624-4d1c-adb7-ebd97a9be6d2/tokens/colors.css">
+<link rel="stylesheet" href="_ds/nord-creative-abb8dd06-d624-4d1c-adb7-ebd97a9be6d2/tokens/typography.css">
+<link rel="stylesheet" href="_ds/nord-creative-abb8dd06-d624-4d1c-adb7-ebd97a9be6d2/tokens/spacing.css">
+<link rel="stylesheet" href="_ds/nord-creative-abb8dd06-d624-4d1c-adb7-ebd97a9be6d2/tokens/effects.css">
+<link rel="stylesheet" href="_ds/nord-creative-abb8dd06-d624-4d1c-adb7-ebd97a9be6d2/tokens/base.css">
+<link rel="stylesheet" href="_ds/nord-creative-abb8dd06-d624-4d1c-adb7-ebd97a9be6d2/styles.css">
+<script src="_ds/nord-creative-abb8dd06-d624-4d1c-adb7-ebd97a9be6d2/_ds_bundle.js"></script>
+<style>
+html{scroll-behavior:smooth}
+body{margin:0;background:#F2F1ED;font-family:var(--font-body);color:#17181A;-webkit-font-smoothing:antialiased}
+a{color:#EF3E36;text-decoration:none}
+a:hover{color:#C92A23}
+::selection{background:#EF3E36;color:#fff}
+input,textarea,select,button{font-family:inherit}
+@keyframes nordUp{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
+@keyframes nordIn{from{opacity:0;transform:translateX(-34px)}to{opacity:1;transform:none}}
+@keyframes nordInRight{from{opacity:0;transform:translateX(34px)}to{opacity:1;transform:none}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;scroll-behavior:auto!important}}
+@media (max-width:1180px){header{gap:20px!important;padding:0 24px!important}header nav{gap:20px!important}header>div:last-of-type>button{display:none!important}}
+@media (max-width:860px){header nav{gap:14px!important}header nav button{font-size:16px!important}}
+@media (max-width:680px){header nav{display:none!important}}
+@media (max-width:820px){[data-hero-row]{flex-wrap:wrap!important;gap:24px!important}}
+</style>
+</helmet>
+
+<div style="min-height:100vh;background:#F2F1ED">
+
+<header style="position:sticky;top:0;z-index:60;display:flex;align-items:center;justify-content:space-between;gap:32px;padding:0 40px;height:76px;background:rgba(242,241,237,.93);backdrop-filter:blur(14px);border-bottom:1px solid rgba(23,24,26,.14)">
+  <button onClick="{{ goHome }}" aria-label="Nord Creative" style="background:none;border:none;padding:0;cursor:pointer;display:flex;align-items:center">
+    <x-import component-from-global-scope="NordCreative_abb8dd.Logo" variant="red" width="{{ logoW }}" asset-base="_ds/nord-creative-abb8dd06-d624-4d1c-adb7-ebd97a9be6d2/assets" hint-size="102px,26px"></x-import>
+  </button>
+  <nav style="display:flex;align-items:center;gap:34px">
+    <sc-for list="{{ nav }}" as="item" hint-placeholder-count="5">
+      <button onClick="{{ item.go }}" style="position:relative;background:none;border:none;padding:8px 0;cursor:pointer;font-size:17px;font-weight:600;letter-spacing:0;line-height:1.35;color:#17181A;transition:transform .16s cubic-bezier(.22,.61,.36,1),opacity .16s cubic-bezier(.22,.61,.36,1)" style-hover="opacity:.62;transform:translateY(-2px)">
+        {{ item.label }}
+        <sc-if value="{{ item.active }}" hint-placeholder-val="{{ false }}">
+          <span style="position:absolute;left:0;right:0;bottom:2px;height:2px;background:#EF3E36"></span>
+        </sc-if>
+      </button>
+    </sc-for>
+  </nav>
+  <div style="display:flex;align-items:center;gap:10px">
+    <div style="display:flex;align-items:center;gap:2px;padding:3px;border:1px solid rgba(23,24,26,.14);border-radius:999px">
+      <button onClick="{{ setTR }}" style="{{ trStyle }}">TR</button>
+      <button onClick="{{ setEN }}" style="{{ enStyle }}">EN</button>
+    </div>
+    
+    
+  </div>
+</header>
+
+<sc-if value="{{ isHome }}" hint-placeholder-val="{{ true }}">
+<main style="height:calc(100vh - 76px);overflow-y:auto;scroll-snap-type:y mandatory;scroll-behavior:smooth;overscroll-behavior:contain">
+  <section style="position:relative;min-height:100%;scroll-snap-align:start;scroll-snap-stop:always;display:flex;flex-direction:column;justify-content:center;gap:16px;padding:28px 40px 40px;background:#17181A;overflow:hidden;box-sizing:border-box">
+    <div style="position:absolute;inset:0;background-image:url('uploads/Gemini_Generated_Image_55enkh55enkh55en copy.webp');background-size:cover;background-position:center;background-repeat:no-repeat"></div>
+    <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(23,24,26,.82) 0%,rgba(23,24,26,.45) 45%,rgba(23,24,26,0) 88%)"></div>
+    <div style="position:absolute;top:28px;left:40px;right:40px;display:flex;align-items:flex-start;justify-content:space-between;gap:24px">
+      
+      
+    </div>
+    <div style="position:relative;max-width:1100px;margin-top:96px;animation:nordUp .6s cubic-bezier(.22,.61,.36,1) both">
+      <h1 style="margin: 0; font-family: var(--font-display); font-weight: 800; font-size: clamp(30px,4.2vw,76px); line-height: 1.06; letter-spacing: -.04em; color: #fff; text-wrap: balance; width: 970px; min-height: 132px">{{ c.hero.title }}</h1>
+      <div data-hero-row="1" style="display:flex;align-items:center;gap:88px;margin-top:28px">
+      
+      <p style="margin: 0; flex: 1 1 auto; min-width: 240px; max-width: 695px; font-size: 15px; font-weight: 400; line-height: 1.6; color: rgba(255,255,255,.88); text-wrap: pretty">{{ c.hero.sub }}</p><div style="display:flex;gap:12px;flex:0 0 auto">
+        <x-import component-from-global-scope="NordCreative_abb8dd.Button" variant="outline" on-dark="{{ true }}" onClick="{{ goWork }}" dc-props="{{ heroProps }}" hint-size="auto,48px">{{ t.navWork }}</x-import>
+      </div>
+      </div>
+    </div>
+  </section>
+
+  <section data-stats="1" style="min-height:100%;scroll-snap-align:start;scroll-snap-stop:always;box-sizing:border-box;display:flex;flex-direction:column;justify-content:center;gap:44px;padding:88px 40px 44px;border-bottom:1px solid rgba(23,24,26,.14)">
+    <div style="display:grid;grid-template-columns:minmax(280px,.8fr) minmax(0,1.5fr);gap:32px;align-items:start">
+      <div data-reveal="1">
+        
+        <h2 style="margin:22px 0 0;font-family:var(--font-display);font-weight:800;font-size:56px;line-height:1.02;letter-spacing:-.03em">{{ c.about.title }}</h2>
+        <div style="width:64px;height:2px;background:#EF3E36;margin-top:28px"></div>
+        <video ref="{{ videoRef }}" src="uploads/Nord_Reels_1080x1080.mp4" autoPlay="{{ true }}" muted="{{ true }}" loop="{{ true }}" playsInline="{{ true }}" style="display:block;width:100%;max-width:380px;aspect-ratio:1 / 1;object-fit:cover;margin-top:36px;background:#17181A"></video>
+      </div>
+      <div data-reveal="1" style="display:flex;flex-direction:column;justify-content:center;gap:28px;min-height:100%">
+        <p style="margin:0;font-size:30px;font-weight:600;line-height:1.32;letter-spacing:-.015em;text-wrap:pretty">{{ c.about.lead }}</p>
+        <p style="margin:0;max-width:620px;font-size:20px;line-height:1.45;color:#63625D;text-wrap:pretty">{{ c.about.body }}</p>
+      </div>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid rgba(23,24,26,.14)">
+      <sc-for list="{{ stats }}" as="s" hint-placeholder-count="3">
+        <div data-reveal="1" style="padding:28px 32px 0 36px;border-right:1px solid rgba(23,24,26,.14)">
+          <x-import component-from-global-scope="NordCreative_abb8dd.StatFigure" value="{{ s.shown }}" suffix="{{ s.suffix }}" label="{{ s.label }}" hint-size="auto,90px"></x-import>
+        </div>
+      </sc-for>
+    </div>
+  </section>
+
+  <section style="min-height:100%;scroll-snap-align:start;scroll-snap-stop:always;box-sizing:border-box;display:flex;flex-direction:column;justify-content:center;padding:0 40px;background:#17181A;color:#fff">
+    <div style="display:flex;align-items:flex-end;justify-content:space-between;gap:24px;margin-bottom:36px;padding-top:48px">
+      <div>
+        
+        <h2 style="margin:18px 0 0;font-family:var(--font-display);font-weight:800;font-size:44px;line-height:1.02;letter-spacing:-.03em">{{ t.servicesTitle }}</h2>
+      </div>
+      
+    </div>
+    <div style="border-top:1px solid rgba(255,255,255,.28);padding-bottom:48px">
+      <sc-for list="{{ serviceRows }}" as="row" hint-placeholder-count="6">
+        <div data-reveal="1" onMouseEnter="{{ row.onEnter }}" onClick="{{ row.onEnter }}" style="border-bottom:1px solid rgba(255,255,255,.28);padding:18px 0;cursor:pointer">
+          <div style="display:flex;align-items:baseline;gap:28px">
+            <span style="min-width:44px;font-size:13px;font-weight:600;letter-spacing:.16em;color:#EF3E36">{{ row.n }}</span>
+            <h3 style="margin:0;flex:1;font-family:var(--font-display);font-weight:800;font-size:32px;line-height:1.06;letter-spacing:-.03em">{{ row.title }}</h3>
+            <span style="font-size:30px;color:rgba(255,255,255,.45)">↗</span>
+          </div>
+          <sc-if value="{{ row.open }}" hint-placeholder-val="{{ false }}">
+            <div style="display:grid;grid-template-columns:44px minmax(0,1fr) minmax(0,1fr);gap:28px;margin-top:16px;animation:nordUp .22s cubic-bezier(.22,.61,.36,1) both">
+              <div></div>
+              <p style="margin:0;max-width:520px;font-size:17px;line-height:1.45;color:rgba(255,255,255,.68)">{{ row.desc }}</p>
+            </div>
+          </sc-if>
+        </div>
+      </sc-for>
+    </div>
+  </section>
+
+  <section style="min-height:100%;scroll-snap-align:start;scroll-snap-stop:always;box-sizing:border-box;display:flex;flex-direction:column;justify-content:center;padding:0 40px;background:#fff;border-bottom:1px solid rgba(23,24,26,.14)">
+    <div style="display:flex;align-items:flex-end;justify-content:space-between;gap:24px;margin-bottom:40px">
+      <div>
+        
+        <h2 style="margin:22px 0 0;font-family:var(--font-display);font-weight:800;font-size:56px;line-height:1.02;letter-spacing:-.03em">{{ t.navWork }}</h2>
+      </div>
+      <button onClick="{{ goWork }}" style="background:none;border:none;padding:0;cursor:pointer;font-size:15px;font-weight:600;letter-spacing:-.015em;color:#EF3E36">{{ t.allWork }} →</button>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:24px">
+      <sc-for list="{{ featured }}" as="p" hint-placeholder-count="3">
+        <div data-reveal="1" onMouseEnter="{{ p.onEnter }}" onMouseLeave="{{ p.onLeave }}" style="{{ p.cellStyle }}">
+          <div style="position:relative;overflow:hidden">
+            <x-import component-from-global-scope="NordCreative_abb8dd.ImageFrame" ratio="{{ p.ratio }}" label="{{ p.label }}" hint-size="100%,320px"></x-import>
+            <sc-if value="{{ p.hover }}" hint-placeholder-val="{{ false }}">
+              <div style="position:absolute;inset:0;background:rgba(23,24,26,.84);display:flex;flex-direction:column;justify-content:flex-end;padding:32px;color:#fff;animation:nordUp .22s cubic-bezier(.22,.61,.36,1) both">
+                <span style="font-size:11px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:#EF3E36">{{ p.type }}</span>
+                <h3 style="margin:10px 0 0;font-family:var(--font-display);font-weight:800;font-size:30px;line-height:1.1;letter-spacing:-.03em">{{ p.title }}</h3>
+                <p style="margin:10px 0 0;max-width:420px;font-size:15px;line-height:1.45;color:rgba(255,255,255,.7)">{{ p.summary }}</p>
+              </div>
+            </sc-if>
+          </div>
+          <div style="margin-top:8px;margin-bottom:0">
+            <span style="font-size:17px;font-weight:600;letter-spacing:-.015em">{{ p.client }}</span>
+          </div>
+        </div>
+      </sc-for>
+    </div>
+  </section>
+
+  <section style="min-height:100%;scroll-snap-align:start;scroll-snap-stop:always;box-sizing:border-box;display:flex;flex-direction:column;justify-content:center;padding:0 40px;border-bottom:1px solid rgba(23,24,26,.14)">
+    <h2 style="margin:0 0 36px;font-family:var(--font-display);font-weight:800;font-size:40px;line-height:1.02;letter-spacing:-.03em">{{ t.refsTitle }}</h2>
+    <div style="display:grid;grid-template-columns:repeat(6,1fr);border-top:1px solid rgba(23,24,26,.14);border-left:1px solid rgba(23,24,26,.14)">
+      <sc-for list="{{ c.brands }}" as="b" hint-placeholder-count="24">
+        <div data-reveal="1" style="display:flex;align-items:center;justify-content:center;min-height:110px;padding:16px;border-right:1px solid rgba(23,24,26,.14);border-bottom:1px solid rgba(23,24,26,.14);font-size:15px;font-weight:600;letter-spacing:-.015em;color:#8C8B85;text-align:center" style-hover="color:#17181A">{{ b }}</div>
+      </sc-for>
+    </div>
+  </section>
+
+  <section style="scroll-snap-align:start;box-sizing:border-box;display:flex;flex-direction:column;justify-content:flex-end;background:#17181A">
+    <footer style="padding:56px 40px 36px;background:#17181A;color:rgba(255,255,255,.6);display:grid;grid-template-columns:minmax(280px,.85fr) minmax(0,1.15fr);gap:80px">
+  <div style="display:flex;flex-direction:column;gap:32px">
+    <button onClick="{{ goHome }}" aria-label="Nord Creative — ana sayfa" style="align-self:flex-start;background:none;border:none;padding:0;cursor:pointer;display:flex">
+      <x-import component-from-global-scope="NordCreative_abb8dd.Logo" variant="white" width="{{ footLogoW }}" asset-base="_ds/nord-creative-abb8dd06-d624-4d1c-adb7-ebd97a9be6d2/assets" hint-size="150px,38px"></x-import>
+    </button>
+    <a href="{{ mailHref }}" style="font-size:17px;font-weight:600;letter-spacing:-.015em;color:#fff;overflow-wrap:anywhere">{{ c.contact.email }}</a>
+    <nav style="display:flex;flex-wrap:wrap;gap:28px;padding-top:28px;border-top:1px solid rgba(255,255,255,.28)">
+      <sc-for list="{{ nav }}" as="item" hint-placeholder-count="5">
+        <button onClick="{{ item.go }}" style="background:none;border:none;padding:0;cursor:pointer;font-size:17px;font-weight:500;letter-spacing:-.015em;color:rgba(255,255,255,.62);transition:color .16s cubic-bezier(.22,.61,.36,1),transform .16s cubic-bezier(.22,.61,.36,1)" style-hover="color:#fff;transform:translateX(3px)">{{ item.label }}</button>
+      </sc-for>
+    </nav>
+  </div>
+
+  <div style="display:flex;flex-direction:column;gap:24px">
+    <h3 style="margin:0;font-family:var(--font-display);font-weight:800;font-size:30px;line-height:1.06;letter-spacing:-.03em;color:#fff">{{ t.instagramTitle }}</h3>
+    <div style="display:grid;grid-template-columns:repeat(6,1fr);gap:10px">
+      <sc-for list="{{ feed }}" as="tile" hint-placeholder-count="12">
+        <a href="{{ igUrl }}" target="_blank" rel="noopener noreferrer" style="display:block">
+          <x-import component-from-global-scope="NordCreative_abb8dd.ImageFrame" ratio="1 / 1" label="{{ tile }}" scrim="none" hint-size="100%,100px"></x-import>
+        </a>
+      </sc-for>
+    </div>
+    <div style="display:flex;gap:12px;flex-wrap:wrap;justify-content:flex-end">
+      <x-import component-from-global-scope="NordCreative_abb8dd.Button" variant="outline" size="sm" on-dark="{{ true }}" href="{{ igUrl }}" target="_blank" rel="noopener noreferrer" dc-props="{{ heroPropsSm }}" hint-size="auto,40px">{{ t.seeAll }}</x-import>
+      <x-import component-from-global-scope="NordCreative_abb8dd.Button" variant="accent" size="sm" href="{{ igUrl }}" target="_blank" rel="noopener noreferrer" dc-props="{{ heroPropsSm }}" hint-size="auto,40px">{{ t.followIg }}</x-import>
+    </div>
+  </div>
+</footer>
+  </section>
+</main>
+</sc-if>
+
+<sc-if value="{{ isServices }}" hint-placeholder-val="{{ false }}">
+
+</sc-if>
+
+<sc-if value="{{ isWork }}" hint-placeholder-val="{{ false }}">
+<main style="padding:104px 40px 130px;animation:nordUp .42s cubic-bezier(.22,.61,.36,1) both">
+  
+  <h1 data-reveal="1" style="margin:24px 0 48px;font-family:var(--font-display);font-weight:800;font-size:96px;line-height:.92;letter-spacing:-.045em">{{ t.navWork }}</h1>
+  <div style="display:flex;gap:10px;flex-wrap:wrap;margin-bottom:44px">
+    <sc-for list="{{ filters }}" as="f" hint-placeholder-count="4">
+      <button onClick="{{ f.go }}" style="{{ f.style }}">{{ f.label }}</button>
+    </sc-for>
+  </div>
+  <div style="display:grid;grid-template-columns:repeat(6,1fr);gap:12px;align-items:start">
+    <sc-for list="{{ workGrid }}" as="p" hint-placeholder-count="6">
+      <div data-reveal="1" onMouseEnter="{{ p.onEnter }}" onMouseLeave="{{ p.onLeave }}" style="{{ p.cellStyle }}">
+        <div style="position:relative;overflow:hidden">
+          <x-import component-from-global-scope="NordCreative_abb8dd.ImageFrame" ratio="{{ p.ratio }}" label="{{ p.label }}" hint-size="100%,320px"></x-import>
+          <sc-if value="{{ p.hover }}" hint-placeholder-val="{{ false }}">
+            <div style="position:absolute;inset:0;background:rgba(23,24,26,.84);display:flex;flex-direction:column;justify-content:flex-end;padding:32px;color:#fff;animation:nordUp .22s cubic-bezier(.22,.61,.36,1) both">
+              <span style="font-size:11px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:#EF3E36">{{ p.type }}</span>
+              <h3 style="margin:10px 0 0;font-family:var(--font-display);font-weight:800;font-size:30px;line-height:1.1;letter-spacing:-.03em">{{ p.title }}</h3>
+              <p style="margin:10px 0 0;max-width:420px;font-size:15px;line-height:1.45;color:rgba(255,255,255,.7)">{{ p.summary }}</p>
+            </div>
+          </sc-if>
+        </div>
+      </div>
+    </sc-for>
+  </div>
+</main>
+</sc-if>
+
+<sc-if value="{{ isBlog }}" hint-placeholder-val="{{ false }}">
+<main style="padding:104px 40px 130px;max-width:1180px;margin:0 auto;animation:nordUp .42s cubic-bezier(.22,.61,.36,1) both">
+  
+  <h1 data-reveal="1" style="margin:24px 0 68px;font-family:var(--font-display);font-weight:800;font-size:96px;line-height:.92;letter-spacing:-.045em">{{ t.navBlog }}</h1>
+  <div style="border-top:1px solid rgba(23,24,26,.14)">
+    <sc-for list="{{ c.posts }}" as="p" hint-placeholder-count="4">
+      <article data-reveal="right" style="padding:40px 0;border-bottom:1px solid rgba(23,24,26,.14)">
+        <h2 style="margin:0;max-width:720px;font-family:var(--font-display);font-weight:800;font-size:40px;line-height:1.08;letter-spacing:-.03em;text-wrap:balance">{{ p.title }}</h2>
+        <p style="margin:16px 0 0;max-width:640px;font-size:20px;line-height:1.45;color:#63625D;text-wrap:pretty">{{ p.excerpt }}</p>
+      </article>
+    </sc-for>
+  </div>
+</main>
+</sc-if>
+
+<sc-if value="{{ isContact }}" hint-placeholder-val="{{ false }}">
+<main style="padding:88px 40px 110px;background:#F2F1ED;animation:nordUp .42s cubic-bezier(.22,.61,.36,1) both">
+  <div style="display:flex;align-items:flex-end;justify-content:space-between;gap:40px;flex-wrap:wrap;padding-bottom:44px;border-bottom:1px solid rgba(23,24,26,.14)">
+    <div>
+      
+      <h1 style="margin:22px 0 0;font-family:var(--font-display);font-weight:800;font-size:72px;line-height:.92;letter-spacing:-.045em">{{ c.contact.title }}</h1>
+    </div>
+    
+  </div>
+
+  <div style="display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:72px;margin-top:64px;align-items:start">
+    <div style="display:flex;flex-direction:column;gap:32px">
+      <div style="background:#17181A;color:#fff;padding:44px 40px;display:flex;flex-direction:column;gap:32px">
+        <div>
+          
+          <h2 style="margin:20px 0 0;font-family:var(--font-display);font-weight:800;font-size:40px;line-height:1.02;letter-spacing:-.03em">{{ t.studioTitle }}</h2>
+          <div style="width:64px;height:2px;background:#EF3E36;margin-top:24px"></div>
+          <p style="margin: 24px 0 0; max-width: 400px; font-size: 15px; line-height: 1.5; color: rgba(255,255,255,.68)">{{ t.studioBody }}</p>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:6px;padding-top:28px;border-top:1px solid rgba(255,255,255,.28)">
+          <span style="font-size:11px;font-weight:600;letter-spacing:.16em;text-transform:none;letter-spacing:.02em;font-size:13px;color:rgba(255,255,255,.5)">{{ t.studioAddr }}</span><span style="font-size:17px;line-height:1.5;color:rgba(255,255,255,.82)">{{ t.addressLine1 }}</span>
+          
+        </div>
+        <div style="display:flex;align-items:flex-end;justify-content:space-between;gap:24px;padding-top:28px;border-top:1px solid rgba(255,255,255,.28)">
+          <x-import component-from-global-scope="NordCreative_abb8dd.Logo" variant="white" width="{{ mapLogoW }}" asset-base="_ds/nord-creative-abb8dd06-d624-4d1c-adb7-ebd97a9be6d2/assets" hint-size="88px,22px"></x-import>
+          
+        </div>
+      </div>
+
+      <a href="{{ mailHref }}" style="font-size:20px;font-weight:600;letter-spacing:-.015em;color:#17181A;overflow-wrap:anywhere">{{ c.contact.email }}</a>
+    </div>
+    <div>
+      <sc-if value="{{ sent }}" hint-placeholder-val="{{ false }}">
+        <div style="animation:nordUp .3s cubic-bezier(.22,.61,.36,1) both">
+          <div style="width:64px;height:2px;background:#EF3E36"></div>
+          <h2 style="margin:28px 0 0;font-family:var(--font-display);font-weight:800;font-size:44px;line-height:1.02;letter-spacing:-.03em">{{ t.sentTitle }}</h2>
+          <p style="margin:20px 0 32px;font-size:20px;line-height:1.45;color:#63625D">{{ t.sentBody }}</p>
+          <x-import component-from-global-scope="NordCreative_abb8dd.Button" variant="outline" onClick="{{ resetForm }}" hint-size="auto,48px">{{ t.sentAgain }}</x-import>
+        </div>
+      </sc-if>
+      <sc-if value="{{ notSent }}" hint-placeholder-val="{{ true }}">
+        <form onSubmit="{{ submit }}" noValidate="{{ true }}" style="display:flex;flex-direction:column;gap:26px">
+          <div aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden">
+            <label>Şirket web sitesi<input type="text" name="company_url" tabindex="-1" autocomplete="off" value="{{ form.hp }}" onChange="{{ onHp }}"></label>
+          </div>
+          <div style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px">
+            <input name="name" placeholder="{{ t.phName }}" maxLength="{{ max80 }}" value="{{ form.name }}" onChange="{{ onName }}" style="{{ pillName }}" style-focus="{{ pillFocus }}">
+            <input name="email" type="email" placeholder="{{ t.phEmail }}" maxLength="{{ max120 }}" value="{{ form.email }}" onChange="{{ onEmail }}" style="{{ pillEmail }}" style-focus="{{ pillFocus }}">
+          </div>
+          <input name="phone" type="tel" placeholder="{{ t.phPhone }}" maxLength="{{ max80 }}" value="{{ form.phone }}" onChange="{{ onPhone }}" style="{{ pill }}" style-focus="{{ pillFocus }}">
+          <div>
+            <select name="service" value="{{ form.service }}" onChange="{{ onService }}" style="{{ pillSelect }}" style-focus="{{ pillFocus }}">
+              <option value="">{{ t.phService }}</option>
+              <sc-for list="{{ serviceOptions }}" as="opt" hint-placeholder-count="6">
+                <option value="{{ opt.value }}">{{ opt.label }}</option>
+              </sc-for>
+            </select>
+            <sc-if value="{{ serviceHint }}" hint-placeholder-val="{{ false }}">
+              <span style="display:block;margin-top:12px;padding-left:26px;font-size:15px;color:#8C8B85">{{ serviceHint }}</span>
+            </sc-if>
+          </div>
+          <textarea name="message" rows="6" maxLength="{{ max1000 }}" placeholder="{{ t.phMsg }}" value="{{ form.msg }}" onChange="{{ onMsg }}" style="{{ pillArea }}" style-focus="{{ pillFocus }}"></textarea>
+          <sc-if value="{{ formError }}" hint-placeholder-val="{{ false }}">
+            <div style="display:flex;gap:10px;align-items:baseline;padding-left:26px;font-size:15px;color:#63625D">
+              <span style="width:5px;height:5px;border-radius:50%;background:#EF3E36;flex:0 0 auto"></span>
+              <span>{{ formError }}</span>
+            </div>
+          </sc-if>
+          <button type="submit" disabled="{{ busy }}" style="{{ pillSubmit }}" style-hover="background:#232528">{{ submitLabel }}</button>
+        </form>
+      </sc-if>
+    </div>
+  </div>
+</main>
+</sc-if>
+
+<sc-if value="{{ isAdmin }}" hint-placeholder-val="{{ false }}">
+<main style="display:grid;grid-template-columns:260px minmax(0,1fr);min-height:calc(100vh - 76px);background:#fff">
+  <aside style="border-right:1px solid rgba(23,24,26,.14);padding:36px 24px;display:flex;flex-direction:column;gap:28px;background:#F2F1ED">
+    <div>
+      <div style="font-size:11px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:#8C8B85">{{ t.cmsTitle }}</div>
+      <div style="margin-top:8px;font-size:13px;color:#63625D">{{ t.cmsSub }}</div>
+    </div>
+    <nav style="display:flex;flex-direction:column;gap:2px">
+      <sc-for list="{{ adminNav }}" as="a" hint-placeholder-count="5">
+        <button onClick="{{ a.go }}" style="{{ a.style }}">{{ a.label }}</button>
+      </sc-for>
+    </nav>
+    <div style="margin-top:auto;display:flex;flex-direction:column;gap:10px">
+      <div style="font-size:13px;color:#8C8B85">{{ saveNote }}</div>
+      <x-import component-from-global-scope="NordCreative_abb8dd.Button" variant="accent" size="sm" onClick="{{ publish }}" hint-size="100%,40px">{{ t.publish }}</x-import>
+      <x-import component-from-global-scope="NordCreative_abb8dd.Button" variant="outline" size="sm" onClick="{{ resetCms }}" hint-size="100%,40px">{{ t.resetCms }}</x-import>
+    </div>
+  </aside>
+
+  <section style="padding:44px 48px 96px;display:flex;flex-direction:column;gap:32px">
+    <div style="display:flex;align-items:center;justify-content:space-between;gap:24px">
+      <h1 style="margin:0;font-family:var(--font-display);font-weight:800;font-size:40px;line-height:1.06;letter-spacing:-.03em">{{ adminHeading }}</h1>
+      <div style="display:flex;align-items:center;gap:12px">
+        <span style="font-size:11px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:#8C8B85">{{ t.editingLang }}</span>
+        <div style="display:flex;gap:2px;padding:3px;border:1px solid rgba(23,24,26,.14);border-radius:999px">
+          <button onClick="{{ setTR }}" style="{{ trStyle }}">TR</button>
+          <button onClick="{{ setEN }}" style="{{ enStyle }}">EN</button>
+        </div>
+      </div>
+    </div>
+
+    <sc-for list="{{ adminFields }}" as="f" hint-placeholder-count="6">
+      <div style="display:grid;grid-template-columns:220px minmax(0,1fr);gap:32px;padding-bottom:24px;border-bottom:1px solid rgba(23,24,26,.14)">
+        <div>
+          <div style="font-size:15px;font-weight:600;letter-spacing:-.015em">{{ f.label }}</div>
+          <div style="margin-top:6px;font-size:13px;line-height:1.45;color:#8C8B85">{{ f.help }}</div>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:10px">
+          <sc-if value="{{ f.isText }}" hint-placeholder-val="{{ true }}">
+            <input value="{{ f.value }}" onChange="{{ f.set }}" style="width:100%;box-sizing:border-box;padding:12px 14px;background:#F2F1ED;border:1px solid rgba(23,24,26,.14);border-radius:12px;font-size:17px;color:#17181A;outline:none">
+          </sc-if>
+          <sc-if value="{{ f.isArea }}" hint-placeholder-val="{{ false }}">
+            <textarea rows="3" value="{{ f.value }}" onChange="{{ f.set }}" style="width:100%;box-sizing:border-box;padding:12px 14px;background:#F2F1ED;border:1px solid rgba(23,24,26,.14);border-radius:12px;font-size:17px;line-height:1.45;color:#17181A;outline:none;resize:vertical"></textarea>
+          </sc-if>
+        </div>
+      </div>
+    </sc-for>
+
+    <sc-if value="{{ adminList }}" hint-placeholder-val="{{ false }}">
+      <div style="display:flex;flex-direction:column;gap:16px">
+        <sc-for list="{{ adminRows }}" as="r" hint-placeholder-count="4">
+          <div style="border:1px solid rgba(23,24,26,.14);border-radius:12px;padding:22px 24px;display:flex;flex-direction:column;gap:14px;background:#fff">
+            <div style="display:flex;align-items:center;justify-content:space-between;gap:16px">
+              <span style="font-size:11px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:#EF3E36">{{ r.index }}</span>
+              <button onClick="{{ r.remove }}" style="background:none;border:1px solid rgba(23,24,26,.14);border-radius:999px;padding:6px 14px;cursor:pointer;font-size:11px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:#63625D" style-hover="color:#EF3E36;border-color:#EF3E36">{{ t.remove }}</button>
+            </div>
+            <div style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px">
+              <sc-for list="{{ r.fields }}" as="rf" hint-placeholder-count="4">
+                <label style="display:flex;flex-direction:column;gap:6px;grid-column:{{ rf.span }}">
+                  <span style="font-size:11px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:#8C8B85">{{ rf.label }}</span>
+                  <input value="{{ rf.value }}" onChange="{{ rf.set }}" style="width:100%;box-sizing:border-box;padding:10px 12px;background:#F2F1ED;border:1px solid rgba(23,24,26,.14);border-radius:10px;font-size:15px;color:#17181A;outline:none">
+                </label>
+              </sc-for>
+            </div>
+          </div>
+        </sc-for>
+        <div>
+          <x-import component-from-global-scope="NordCreative_abb8dd.Button" variant="outline" size="sm" onClick="{{ addRow }}" trailing="+" hint-size="auto,40px">{{ addLabel }}</x-import>
+        </div>
+      </div>
+    </sc-if>
+  </section>
+</main>
+</sc-if>
+
+<sc-if value="{{ isServices }}" hint-placeholder-val="{{ false }}">
+<main style="padding:104px 40px 130px;animation:nordUp .42s cubic-bezier(.22,.61,.36,1) both">
+  
+  
+  <h1 style="margin: 24px 0 0; max-width: 900px; font-family: var(--font-display); font-weight: 800; font-size: 85px; line-height: .92; letter-spacing: -.045em">{{ t.servicesHead }}</h1>
+  <div style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));grid-auto-rows:1fr;gap:24px;margin-top:72px">
+    <sc-for list="{{ services }}" as="s" hint-placeholder-count="6">
+      <div data-reveal="1" style="display:flex;height:100%">
+        <x-import component-from-global-scope="NordCreative_abb8dd.Card" surface="white" radius="none" bordered="{{ true }}" accent-rule="{{ true }}" pad="40px" style="{{ cardFill }}" hint-size="100%,300px">
+          <span style="font-size:13px;font-weight:600;letter-spacing:.16em;color:#EF3E36">{{ s.n }}</span>
+          <h2 style="margin:18px 0 0;font-family:var(--font-display);font-weight:800;font-size:30px;line-height:1.1;letter-spacing:-.03em">{{ s.title }}</h2>
+          <p style="margin:16px 0 0;font-size:17px;line-height:1.45;color:#63625D">{{ s.desc }}</p>
+        </x-import>
+      </div>
+    </sc-for>
+  </div>
+</main>
+</sc-if>
+
+<sc-if value="{{ notHome }}" hint-placeholder-val="{{ false }}">
+<footer style="padding:56px 40px 36px;background:#17181A;color:rgba(255,255,255,.6);display:grid;grid-template-columns:minmax(280px,.85fr) minmax(0,1.15fr);gap:80px">
+  <div style="display:flex;flex-direction:column;gap:32px">
+    <button onClick="{{ goHome }}" aria-label="Nord Creative — ana sayfa" style="align-self:flex-start;background:none;border:none;padding:0;cursor:pointer;display:flex">
+      <x-import component-from-global-scope="NordCreative_abb8dd.Logo" variant="white" width="{{ footLogoW }}" asset-base="_ds/nord-creative-abb8dd06-d624-4d1c-adb7-ebd97a9be6d2/assets" hint-size="150px,38px"></x-import>
+    </button>
+    <a href="{{ mailHref }}" style="font-size:17px;font-weight:600;letter-spacing:-.015em;color:#fff;overflow-wrap:anywhere">{{ c.contact.email }}</a>
+    <nav style="display:flex;flex-wrap:wrap;gap:28px;padding-top:28px;border-top:1px solid rgba(255,255,255,.28)">
+      <sc-for list="{{ nav }}" as="item" hint-placeholder-count="5">
+        <button onClick="{{ item.go }}" style="background:none;border:none;padding:0;cursor:pointer;font-size:17px;font-weight:500;letter-spacing:-.015em;color:rgba(255,255,255,.62);transition:color .16s cubic-bezier(.22,.61,.36,1),transform .16s cubic-bezier(.22,.61,.36,1)" style-hover="color:#fff;transform:translateX(3px)">{{ item.label }}</button>
+      </sc-for>
+    </nav>
+  </div>
+
+  <div style="display:flex;flex-direction:column;gap:24px">
+    <h3 style="margin:0;font-family:var(--font-display);font-weight:800;font-size:30px;line-height:1.06;letter-spacing:-.03em;color:#fff">{{ t.instagramTitle }}</h3>
+    <div style="display:grid;grid-template-columns:repeat(6,1fr);gap:10px">
+      <sc-for list="{{ feed }}" as="tile" hint-placeholder-count="12">
+        <a href="{{ igUrl }}" target="_blank" rel="noopener noreferrer" style="display:block">
+          <x-import component-from-global-scope="NordCreative_abb8dd.ImageFrame" ratio="1 / 1" label="{{ tile }}" scrim="none" hint-size="100%,100px"></x-import>
+        </a>
+      </sc-for>
+    </div>
+    <div style="display:flex;gap:12px;flex-wrap:wrap;justify-content:flex-end">
+      <x-import component-from-global-scope="NordCreative_abb8dd.Button" variant="outline" size="sm" on-dark="{{ true }}" href="{{ igUrl }}" target="_blank" rel="noopener noreferrer" dc-props="{{ heroPropsSm }}" hint-size="auto,40px">{{ t.seeAll }}</x-import>
+      <x-import component-from-global-scope="NordCreative_abb8dd.Button" variant="accent" size="sm" href="{{ igUrl }}" target="_blank" rel="noopener noreferrer" dc-props="{{ heroPropsSm }}" hint-size="auto,40px">{{ t.followIg }}</x-import>
+    </div>
+  </div>
+</footer>
+</sc-if>
+
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1440,&quot;height&quot;:900}}">
+const DEFAULTS = {
+  tr: {
+    hero: { title: "Markanızın dijital dünyadaki\nyolculuğuna yön veriyoruz.", sub: "Nord Creative olarak, markanızın vizyonu ve hedefleri doğrultusunda profesyonel görsel prodüksiyon ve dijital çözümleri üretiyoruz. Fotoğraf ve video prodüksiyonundan sosyal medya yönetimine, e-ticaret ve ürün çekimlerinden YouTube, podcast ve kurumsal içerik üretimine kadar geniş bir alanda 360 derece kreatif hizmet sunuyoruz.", cta: "Projeyi Konuşalım" },
+    about: {
+      title: "Ne yapıyoruz?",
+      lead: "Markaların dijital dünyadaki tüm ihtiyaçlarına bütüncül çözümler üretiyoruz.",
+      body: "Ekibimizle birlikte; sosyal medya yönetimi ve dijital pazarlama süreçlerinin yanı sıra e-ticaret, kurumsal içerik, YouTube, podcast ve röportaj prodüksiyonlarını kapsayan geniş bir hizmet yelpazesi sunuyoruz."
+    },
+    stats: [
+      { value: "5", suffix: "+", label: "Yıllık prodüksiyon deneyimi" },
+      { value: "25", suffix: "+", label: "Birlikte çalıştığımız marka" },
+      { value: "1", suffix: " saat", label: "Ortalama dönüş süresi" }
+    ],
+    services: [
+      { title: "Fotoğraf Çekimi", desc: "Markanızın en güçlü halini kadraja alıyoruz. Detaylara özen gösteren, estetik ve profesyonel karelerle ürünlerinizi, mekanlarınızı ve kurumsal kimliğinizi görsel bir şölene dönüştürüyoruz.", tags: ["Ürün", "Kurumsal portre", "Mekân"] },
+      { title: "Video Prodüksiyon", desc: "Fikirden kurguya, uçtan uca modern bir anlatı. Yenilikçi görsel teknolojiler ve sinematik bir dille, markanızın vizyonunu en etkileyici haliyle ekrana taşıyoruz.", tags: ["Kurumsal film", "Kampanya", "Kurgu"] },
+      { title: "Reels Çekimi", desc: "Kısa, çarpıcı ve akılda kalıcı. Dijital dünyanın hızına uygun, izleyicinin dikkatini ilk saniyede yakalayan ve hedef kitlenizle doğrudan bağ kuran dinamik dikey içerikler üretiyoruz.", tags: ["Dikey video", "Seri çekim", "Altyazı"] },
+      { title: "Sosyal Medya Yönetimi", desc: "Siz işinize odaklanın, sosyal medya dünyanızı biz tasarlayalım. Marka kimliğinize sadık kalan bütüncül bir görsel dil ve tutarlı içerik planlamasıyla, topluluğunuzu büyütüyoruz.", tags: ["İçerik planı", "Tasarım", "Raporlama"] },
+      { title: "Digital Marketing", desc: "Doğru kitle, doğru mesaj ve ölçülebilir büyüme. Veri odaklı stratejiler ve güncel dijital kampanyalarla markanızın sektördeki ayak izini genişletiyoruz.", tags: ["Performans", "E-ticaret", "Kreatif"] },
+      { title: "Podcast & Röportaj", desc: "Çok kameralı stüdyo kaydı, ses miksajı ve yayın formatlarına göre kısa kesitler.", tags: ["Çok kamera", "Ses miksajı", "YouTube"] }
+    ],
+    projects: [
+      { client: "Kuveyt Türk", title: "Kurumsal film serisi", type: "Video prodüksiyon", year: "2025", summary: "Genel müdürlük ve şube çekimleriyle kurgulanan üç bölümlük kurumsal film.", cat: "Video" },
+      { client: "Migros One", title: "Ürün kataloğu çekimi", type: "Fotoğraf", year: "2025", summary: "Bir günde 120 ürünlük katalog seti; sabit ışık kurulumu ve stüdyo retouch.", cat: "Fotoğraf" },
+      { client: "Tosyalı Holding", title: "Saha ve üretim içerikleri", type: "Kurumsal içerik", year: "2024", summary: "Üretim hattında çekilen fotoğraf ve video arşivi, kurumsal iletişim için.", cat: "Video" },
+      { client: "Arabam.com", title: "Reels serisi", type: "Sosyal medya", year: "2025", summary: "Aylık yayın takvimine bağlı dikey video serisi ve altyazı sistemi.", cat: "Sosyal" },
+      { client: "Mamajoo", title: "E-ticaret çekimi", type: "Ürün fotoğrafı", year: "2024", summary: "Pazaryeri standartlarına uygun beyaz fon ve yaşam alanı görselleri.", cat: "Fotoğraf" },
+      { client: "Adile Sultan", title: "Mekân ve etkinlik", type: "Fotoğraf & video", year: "2024", summary: "Mekân tanıtımı ve etkinlik günü çekimi; aynı gün sosyal medya teslimi.", cat: "Sosyal" }
+    ],
+    posts: [
+      { date: "12 Ağustos 2025", kicker: "Prodüksiyon", title: "Bir çekim gününden 120 ürün nasıl çıkar?", excerpt: "Katalog çekimlerinde hızın kaynağı ekipman değil, çekim öncesi hazırlık. Set akışını nasıl kuruyoruz?", read: "6 dk" },
+      { date: "28 Temmuz 2025", kicker: "Sosyal medya", title: "Reels'te ilk üç saniye", excerpt: "Dikey videoda izleyiciyi tutan şey kurgu ritmi. Çekim planını buna göre yazmak gerekiyor.", read: "4 dk" },
+      { date: "9 Haziran 2025", kicker: "Marka", title: "Kurumsal filmde ton meselesi", excerpt: "Aynı senaryo iki farklı tonla çekildiğinde tamamen farklı iki marka anlatısı çıkıyor.", read: "7 dk" },
+      { date: "21 Mayıs 2025", kicker: "Stüdyo", title: "Podcast setinde ses, görüntüden önce gelir", excerpt: "Çok kameralı bir kayıtta en sık yapılan hata, mikrofon yerleşimini son adıma bırakmak.", read: "5 dk" }
+    ],
+    contact: { title: "Bir kahve\niçelim mi?", sub: "Projeni anlat, birlikte nasıl çekeceğimizi konuşalım. Genelde 24 saat içinde dönüyoruz.", email: "info@nordcreative.co", phone: "+90 000 000 00 00" },
+    brands: ["Tosyalı Holding", "DepoDone", "Kuveyt Türk", "Migros One", "Arabam.com", "Önder Tiryaki", "Tatko", "Jes Wellis", "Marjes", "Impact Hub", "Sonors", "Narlı Bahçe Evleri", "Atölye N°6", "Açık Tezgah", "Ghanbari", "Beach & Beyond", "Simas", "Boxish", "Adile Sultan", "Macrocenter", "Mamajoo", "Taze Direkt", "Studio Camp"]
+  },
+  en: {
+    hero: { title: "We shape your brand's journey\nin the digital world.", sub: "We produce professional visual production and digital solutions in line with your brand's vision and goals. From photo and video production to social media management, from e-commerce and product shoots to YouTube, podcast and corporate content, we offer 360-degree creative services.", cta: "Let's talk" },
+    about: {
+      title: "What we do",
+      lead: "We build end-to-end solutions for everything a brand needs in the digital space.",
+      body: "Alongside social media management and digital marketing, our team covers e-commerce, corporate content, YouTube, podcast and interview production."
+    },
+    stats: [
+      { value: "5", suffix: "+", label: "Years of production" },
+      { value: "25", suffix: "+", label: "Brands we have worked with" },
+      { value: "1", suffix: "h", label: "Average reply time" }
+    ],
+    services: [
+      { title: "Photography", desc: "Product, corporate portrait and location shoots — from lighting setup to retouched delivery.", tags: ["Product", "Portrait", "Location"] },
+      { title: "Video Production", desc: "Corporate films, launch and campaign videos. Script, shoot, edit and colour included.", tags: ["Corporate film", "Campaign", "Edit"] },
+      { title: "Reels", desc: "Vertical short-form series. One shoot day produces a full publishing calendar.", tags: ["Vertical", "Series", "Subtitles"] },
+      { title: "Social Media", desc: "Content plan, design, publishing and community management, with a monthly report.", tags: ["Content plan", "Design", "Reporting"] },
+      { title: "Digital Marketing", desc: "Performance campaigns, e-commerce content and conversion-led creative.", tags: ["Performance", "E-commerce", "Creative"] },
+      { title: "Podcast & Interview", desc: "Multi-camera studio recording, audio mix and cut-downs per platform.", tags: ["Multi-cam", "Audio mix", "YouTube"] }
+    ],
+    projects: [
+      { client: "Kuveyt Türk", title: "Corporate film series", type: "Video production", year: "2025", summary: "A three-part corporate film shot across headquarters and branches.", cat: "Video" },
+      { client: "Migros One", title: "Catalogue shoot", type: "Photography", year: "2025", summary: "120 products in a single day with a fixed lighting setup and studio retouch.", cat: "Fotoğraf" },
+      { client: "Tosyalı Holding", title: "Plant and field content", type: "Corporate content", year: "2024", summary: "A photo and video archive shot on the production line for corporate comms.", cat: "Video" },
+      { client: "Arabam.com", title: "Reels series", type: "Social media", year: "2025", summary: "A vertical video series tied to a monthly publishing calendar.", cat: "Sosyal" },
+      { client: "Mamajoo", title: "E-commerce shoot", type: "Product photography", year: "2024", summary: "Marketplace-compliant white background and lifestyle imagery.", cat: "Fotoğraf" },
+      { client: "Adile Sultan", title: "Venue and event", type: "Photo & video", year: "2024", summary: "Venue film and event-day coverage, delivered for social the same day.", cat: "Sosyal" }
+    ],
+    posts: [
+      { date: "12 August 2025", kicker: "Production", title: "How 120 products come out of one shoot day", excerpt: "Speed on a catalogue shoot comes from preparation, not equipment. Here is how we run the set.", read: "6 min" },
+      { date: "28 July 2025", kicker: "Social", title: "The first three seconds of a Reel", excerpt: "What holds a viewer in vertical video is edit rhythm — and the shot list has to be written for it.", read: "4 min" },
+      { date: "9 June 2025", kicker: "Brand", title: "Tone in a corporate film", excerpt: "The same script shot in two tones produces two entirely different brand narratives.", read: "7 min" },
+      { date: "21 May 2025", kicker: "Studio", title: "On a podcast set, sound comes before picture", excerpt: "The most common mistake in multi-camera recording is leaving mic placement to the last step.", read: "5 min" }
+    ],
+    contact: { title: "Shall we grab a coffee?", sub: "Tell us about the project and we will work out how to shoot it. We usually reply within 24 hours.", email: "info@nordcreative.co", phone: "+90 000 000 00 00" },
+    brands: ["Tosyalı Holding", "DepoDone", "Kuveyt Türk", "Migros One", "Arabam.com", "Önder Tiryaki", "Tatko", "Jes Wellis", "Marjes", "Impact Hub", "Sonors", "Narlı Bahçe Evleri", "Atölye N°6", "Açık Tezgah", "Ghanbari", "Beach & Beyond", "Simas", "Boxish", "Adile Sultan", "Macrocenter", "Mamajoo", "Taze Direkt", "Studio Camp"]
+  }
+};
+
+const UI = {
+  tr: {
+    navHome: "Ana Sayfa", navServices: "Hizmetler", navWork: "Projelerimiz", navBlog: "Blog", navContact: "İletişim",
+    navCta: "Projeyi Konuşalım", adminBtn: "İçerik paneli",
+    heroEyebrow: "Prodüksiyon & dijital medya", heroFrame: "Soyut minimal görsel — tam ekran alan",
+    aboutEyebrow: "Ne yapıyoruz", servicesTitle: "Hizmetlerimiz", allServices: "Tüm hizmetler",
+    servicesHead: "Crafting your brand's visual story.", servicesLead: "Prodüksiyon, kurgu, içerik planı ve yayın yönetimi tek ekipten çıkar.",
+    selectedWork: "Seçili işler", allWork: "Tüm projeler",
+    refsEyebrow: "Referanslar", refsTitle: "Birlikte çalıştığımız markalar",
+    blogEyebrow: "Günlük", brief: "Brief bırak",
+    filterAll: "Hepsi",
+    phService: "Hangi konuda yardımcı olabiliriz?", errService: "Göndermeden önce bir hizmet seçin.",
+    fName: "Ad", fSurname: "Soyad", fEmail: "E-posta", fPhone: "Telefon", fBrand: "Marka", fService: "Hizmet", fMsg: "Proje özeti",
+    phName: "Ad soyad", phSurname: "Soyad", phEmail: "E-posta", phPhone: "Telefon", phMsg: "Projeden birkaç cümleyle bahsedin",
+    studioEyebrow: "Stüdyo", studioTitle: "Birlikte Üretelim.", studioBody: "Brief’i uzun uzun sayfalara dökmek yerine fikrini doğrudan anlatmak isterseniz formu doldurmanız yeterli. Çekim planlarını ve projenizin ihtiyaç duyduğu görsel dünyayı konuşmak için hemen iletişime geçelim.", studioAddr: "Adres", studioHours: "Hafta içi 09.00 – 18.30", addressLine1: "İstanbul, Türkiye", addressLine2: "", directions: "Yol tarifi",
+    fConsent: "Verilerimin bu talep için işlenmesini kabul ediyorum.",
+    submit: "Gönder", submitBusy: "Gönderiliyor…",
+    rateNote: "Dakikada bir gönderim.",
+    sentTitle: "Brief bize ulaştı.", sentBody: "24 saat içinde dönüş yapıyoruz. Acil bir işse telefonla arayabilirsin.", sentAgain: "Yeni brief",
+    securityTitle: "Form güvenliği",
+    securityList: ["Görünmez honeypot alanı ve gönderim süresi kontrolü", "Sunucu tarafında girdi doğrulama ve HTML kaçışlama (XSS)", "Oturum başına CSRF token'ı", "IP başına dakikada 1, saatte 10 istek sınırı"],
+    errName: "Ad soyad gerekli.", errEmail: "Geçerli bir e-posta yaz.", errMsg: "Birkaç cümleyle projeyi anlat.",
+    errConsent: "Devam etmek için onay gerekiyor.", errRate: "Çok hızlı. Bir dakika sonra tekrar dene.", errBot: "Gönderim doğrulanamadı.",
+    cmsTitle: "İçerik paneli", cmsSub: "Alanları düzenle, yayınla. Kod gerekmiyor.",
+    aGeneral: "Ana sayfa", aServices: "Hizmetler", aWork: "Projeler", aBlog: "Blog", aContact: "İletişim",
+    publish: "Yayınla", resetCms: "Varsayılana dön", remove: "Sil", editingLang: "Düzenlenen dil",
+    addService: "Hizmet ekle", addProject: "Proje ekle", addPost: "Yazı ekle",
+    saved: "Kaydedildi", unsaved: "Kaydedilmemiş değişiklik var",
+    instagramTitle: "Instagram", seeAll: "Tümünü Gör", followIg: "Instagram'da Takip Edin",
+    footerLegal: "Nord Creative · Prodüksiyon ve dijital medya"
+  },
+  en: {
+    navHome: "Home", navServices: "Services", navWork: "Work", navBlog: "Journal", navContact: "Contact",
+    navCta: "Start a project", adminBtn: "Content panel",
+    heroEyebrow: "Production & digital media", heroFrame: "Abstract minimal visual — full-bleed area",
+    aboutEyebrow: "What we do", servicesTitle: "Services", allServices: "All services",
+    servicesHead: "From behind the camera to publication.", servicesLead: "Production, edit, content plan and publishing come from one team.",
+    selectedWork: "Selected work", allWork: "All projects",
+    refsEyebrow: "Clients", refsTitle: "Brands we work with",
+    blogEyebrow: "Journal", brief: "Send a brief",
+    filterAll: "All",
+    phService: "What can we help with?", errService: "Please choose a service before submitting.",
+    fName: "First name", fSurname: "Last name", fEmail: "Email", fPhone: "Phone", fBrand: "Brand", fService: "Service", fMsg: "Project summary",
+    phName: "Name", phSurname: "Last name", phEmail: "Email", phPhone: "Phone", phMsg: "Share a few details about your situation",
+    studioEyebrow: "Studio", studioTitle: "Our door is open.", studioBody: "If you would rather talk than write a brief, come to the studio — we will walk through the sets, the kit and previous work together.", studioAddr: "Address", studioHours: "Weekdays 09.00 – 18.30", addressLine1: "İstanbul, Türkiye", addressLine2: "", directions: "Directions",
+    fConsent: "I agree to my data being processed for this enquiry.",
+    submit: "Send", submitBusy: "Sending…",
+    rateNote: "One submission per minute.",
+    sentTitle: "Your brief reached us.", sentBody: "We reply within 24 hours. If it is urgent, call us instead.", sentAgain: "New brief",
+    securityTitle: "Form security",
+    securityList: ["Invisible honeypot field and submission timing check", "Server-side validation and HTML escaping (XSS)", "Per-session CSRF token", "Rate limit: 1 request per minute, 10 per hour per IP"],
+    errName: "Name is required.", errEmail: "Enter a valid email.", errMsg: "Describe the project in a few sentences.",
+    errConsent: "Consent is required to continue.", errRate: "Too fast. Try again in a minute.", errBot: "Submission could not be verified.",
+    cmsTitle: "Content panel", cmsSub: "Edit the fields and publish. No code needed.",
+    aGeneral: "Home", aServices: "Services", aWork: "Work", aBlog: "Journal", aContact: "Contact",
+    publish: "Publish", resetCms: "Reset to default", remove: "Delete", editingLang: "Editing language",
+    addService: "Add service", addProject: "Add project", addPost: "Add post",
+    saved: "Saved", unsaved: "Unsaved changes",
+    instagramTitle: "Instagram", seeAll: "See All", followIg: "Follow on Instagram",
+    footerLegal: "Nord Creative · Production and digital media"
+  }
+};
+
+const SPANS = [4, 2, 3, 3, 2, 4];
+const RATIOS = { 4: "16 / 9", 3: "4 / 3", 2: "4 / 5" };
+const clone = (o) => JSON.parse(JSON.stringify(o));
+
+class Component extends DCLogic {
+  state = {
+    page: "home", lang: "tr", data: clone(DEFAULTS),
+    openService: 0, hoverKey: null, filter: "all",
+    adminTab: "general", dirty: false, savedAt: null,
+    form: { name: "", surname: "", email: "", phone: "", service: "", msg: "", consent: false, hp: "" },
+    err: {}, formError: "", busy: false, sent: false, lastSubmit: 0, mountedAt: Date.now(), counts: [0, 0, 0]
+  };
+
+  componentDidMount() {
+    try {
+      const raw = localStorage.getItem("nord.cms.v1");
+      if (raw) this.setState({ data: JSON.parse(raw) });
+    } catch (e) {}
+    this.statIo = new IntersectionObserver((entries) => {
+      entries.forEach((en) => {
+        if (!en.isIntersecting) return;
+        this.statIo.unobserve(en.target);
+        this.runCounts();
+      });
+    }, { threshold: .3 });
+    this.io = new IntersectionObserver((entries) => {
+      entries.forEach((en) => {
+        if (en.isIntersecting) {
+          const dir = en.target.getAttribute("data-reveal") === "right" ? "nordInRight" : "nordIn";
+          const i = Number(en.target.getAttribute("data-reveal-i") || 0);
+          en.target.style.animation = dir + " .62s cubic-bezier(.22,.61,.36,1) " + (i * 70) + "ms both";
+          this.io.unobserve(en.target);
+        }
+      });
+    }, { rootMargin: "0px 0px -8% 0px" });
+    this.observe();
+  }
+  playVideo() {
+    const v = this.videoEl;
+    if (!v) return;
+    v.muted = true;
+    const p = v.play();
+    if (p && p.catch) p.catch(() => {});
+  }
+  componentDidUpdate(_, prev) {
+    if (prev.page !== this.state.page) {
+      window.scrollTo({ top: 0 });
+      const m = document.querySelector("main");
+      if (m && m.scrollTop) m.scrollTop = 0;
+    }
+    this.observe();
+  }
+  componentWillUnmount() {
+    if (this.io) this.io.disconnect();
+    if (this.statIo) this.statIo.disconnect();
+    if (this.raf) cancelAnimationFrame(this.raf);
+  }
+  runCounts() {
+    const targets = this.L().stats.map((x) => parseInt(String(x.value).replace(/\D/g, ""), 10) || 0);
+    const t0 = performance.now(), dur = 1400;
+    const tick = (now) => {
+      const p = Math.min(1, (now - t0) / dur);
+      const e = 1 - Math.pow(1 - p, 3);
+      this.setState({ counts: targets.map((v) => Math.round(v * e)) });
+      if (p < 1) this.raf = requestAnimationFrame(tick);
+    };
+    this.raf = requestAnimationFrame(tick);
+  }
+  observe() {
+    if (!this.io) return;
+    requestAnimationFrame(() => {
+      if (this.statIo) {
+        const first = document.querySelector("[data-stats]:not([data-stat-seen])");
+        if (first) { first.setAttribute("data-stat-seen", "1"); this.statIo.observe(first); }
+      }
+      document.querySelectorAll("[data-reveal]:not([data-seen])").forEach((el, i) => {
+        el.setAttribute("data-seen", "1");
+        if (!el.hasAttribute("data-reveal-i")) el.setAttribute("data-reveal-i", String(i % 6));
+        el.style.opacity = "0";
+        this.io.observe(el);
+      });
+    });
+  }
+
+  go(page) { return () => this.setState({ page, hoverKey: null }); }
+  L() { return this.state.data[this.state.lang]; }
+  patch(path, value) {
+    const d = clone(this.state.data);
+    let node = d[this.state.lang];
+    for (let i = 0; i < path.length - 1; i++) node = node[path[i]];
+    node[path[path.length - 1]] = value;
+    this.setState({ data: d, dirty: true });
+  }
+
+  escape(s) { return String(s).replace(/[<>&"']/g, (ch) => ({ "<": "&lt;", ">": "&gt;", "&": "&amp;", '"': "&quot;", "'": "&#39;" }[ch])); }
+
+  submit(e) {
+    e.preventDefault();
+    const ui = UI[this.state.lang];
+    const f = this.state.form;
+    const err = {};
+    if (f.hp.trim() || Date.now() - this.state.mountedAt < 2000) {
+      this.setState({ formError: ui.errBot });
+      return;
+    }
+    if (Date.now() - this.state.lastSubmit < 60000) { this.setState({ formError: ui.errRate }); return; }
+    if (f.name.trim().length < 2) err.name = true;
+    if (!/^[^\s@]+@[^\s@]+\.[a-z]{2,}$/i.test(f.email.trim())) err.email = true;
+    if (f.msg.trim().length < 12) err.msg = true;
+    if (!f.service) err.service = true;
+    if (Object.keys(err).length) {
+      this.setState({ err, formError: err.msg ? ui.errMsg : "" });
+      return;
+    }
+    this.setState({ busy: true, err: {}, formError: "" });
+    const payload = {
+      name: this.escape(f.name.trim()).slice(0, 80),
+      surname: this.escape(f.surname.trim()).slice(0, 80),
+      email: this.escape(f.email.trim()).slice(0, 120),
+      phone: this.escape(f.phone.trim()).slice(0, 40),
+      service: f.service, message: this.escape(f.msg.trim()).slice(0, 1000)
+    };
+    setTimeout(() => this.setState({ busy: false, sent: true, lastSubmit: Date.now(), payload }), 700);
+  }
+
+  renderVals() {
+    const st = this.state, ui = UI[st.lang], c = this.L();
+    const pillStyle = (bad) => ({
+      width: "100%", boxSizing: "border-box", padding: "20px 26px",
+      background: "#fff", border: "1px solid " + (bad ? "#EF3E36" : "rgba(23,24,26,.16)"),
+      borderRadius: 999, fontSize: 17, color: "#17181A", outline: "none",
+      transition: "border-color .16s cubic-bezier(.22,.61,.36,1)"
+    });
+    const set = (k) => (e) => this.setState({ form: { ...st.form, [k]: e.target.value }, err: { ...st.err, [k]: false }, formError: "" });
+    const pill = (on) => "background:" + (on ? "#17181A" : "transparent") + ";color:" + (on ? "#fff" : "#63625D") + ";border:none;border-radius:999px;padding:6px 12px;cursor:pointer;font-size:11px;font-weight:600;letter-spacing:.12em";
+    const chip = (on) => "background:" + (on ? "#17181A" : "transparent") + ";color:" + (on ? "#fff" : "#17181A") + ";border:1px solid " + (on ? "#17181A" : "rgba(23,24,26,.14)") + ";border-radius:999px;padding:10px 20px;cursor:pointer;font-size:15px;font-weight:500";
+    const tab = (on) => "text-align:left;background:" + (on ? "#fff" : "transparent") + ";border:1px solid " + (on ? "rgba(23,24,26,.14)" : "transparent") + ";border-radius:10px;padding:11px 14px;cursor:pointer;font-size:15px;font-weight:" + (on ? 600 : 500) + ";color:#17181A";
+
+    const decorate = (list, offset) => list.map((p, i) => {
+      const span = SPANS[(i + (offset || 0)) % SPANS.length];
+      const key = (offset || 0) + "-" + i;
+      return {
+        ...p, ratio: RATIOS[span], label: p.client + " — " + p.type,
+        cellStyle: "grid-column:span " + span,
+        hover: st.hoverKey === key,
+        onEnter: () => this.setState({ hoverKey: key }),
+        onLeave: () => this.setState({ hoverKey: null })
+      };
+    });
+
+    const cats = ["all"].concat(Array.from(new Set(c.projects.map((p) => p.cat))));
+    const shown = st.filter === "all" ? c.projects : c.projects.filter((p) => p.cat === st.filter);
+
+    const textField = (label, help, path, area) => ({
+      label, help, isText: !area, isArea: !!area,
+      value: path.reduce((o, k) => o[k], c),
+      set: (e) => this.patch(path, e.target.value)
+    });
+
+    let adminFields = [], adminRows = null, adminList = false, addRow = null, addLabel = "", adminHeading = ui.aGeneral;
+    if (st.adminTab === "general") {
+      adminFields = [
+        textField(ui.aGeneral + " — başlık", "Hero'daki büyük satır.", ["hero", "title"]),
+        textField("Hero alt metni", "Bir cümle, en fazla 25 kelime.", ["hero", "sub"], true),
+        textField("Hero buton", "Birincil aksiyon etiketi.", ["hero", "cta"]),
+        textField("Ne yapıyoruz — başlık", "", ["about", "title"]),
+        textField("Ne yapıyoruz — giriş", "", ["about", "lead"], true),
+        textField("Ne yapıyoruz — gövde", "", ["about", "body"], true)
+      ];
+    } else if (st.adminTab === "contact") {
+      adminHeading = ui.aContact;
+      adminFields = [
+        textField("Başlık", "", ["contact", "title"]),
+        textField("Açıklama", "", ["contact", "sub"], true),
+        textField("E-posta", "", ["contact", "email"]),
+        textField("Telefon", "", ["contact", "phone"])
+      ];
+    } else {
+      const map = { services: ["services", ui.aServices, ui.addService], work: ["projects", ui.aWork, ui.addProject], blog: ["posts", ui.aBlog, ui.addPost] };
+      const [key, heading, add] = map[st.adminTab];
+      adminHeading = heading; adminList = true; addLabel = add;
+      const specs = {
+        services: [["title", "Başlık", "span 1"], ["desc", "Açıklama", "span 2"]],
+        projects: [["client", "Marka", "span 1"], ["title", "Proje", "span 1"], ["type", "Tür", "span 1"], ["year", "Yıl", "span 1"], ["summary", "Özet", "span 2"]],
+        posts: [["kicker", "Etiket", "span 1"], ["date", "Tarih", "span 1"], ["title", "Başlık", "span 2"], ["excerpt", "Özet", "span 2"], ["read", "Okuma süresi", "span 1"]]
+      }[key];
+      adminRows = c[key].map((row, i) => ({
+        index: String(i + 1).padStart(2, "0"),
+        remove: () => { const d = clone(st.data); d[st.lang][key].splice(i, 1); this.setState({ data: d, dirty: true }); },
+        fields: specs.map(([f, label, span]) => ({
+          label, span, value: row[f] || "",
+          set: (e) => { const d = clone(st.data); d[st.lang][key][i][f] = e.target.value; this.setState({ data: d, dirty: true }); }
+        }))
+      }));
+      addRow = () => {
+        const d = clone(st.data);
+        const blank = { services: { title: "Yeni hizmet", desc: "", tags: [] }, projects: { client: "Yeni marka", title: "", type: "", year: "", summary: "", cat: "Video" }, posts: { kicker: "", date: "", title: "Yeni yazı", excerpt: "", read: "" } }[key];
+        d[st.lang][key].push(clone(blank));
+        this.setState({ data: d, dirty: true });
+      };
+    }
+
+    return {
+      t: ui, c, logoW: 102, footLogoW: 150, heroLogoW: 132,
+      max80: 80, max120: 120, max1000: 1000, mapLogoW: 88,
+      videoRef: (el) => { if (el && el !== this.videoEl) { this.videoEl = el; this.playVideo(); } },
+      pill: pillStyle(false), pillName: pillStyle(st.err.name), pillEmail: pillStyle(st.err.email),
+      pillSelect: { ...pillStyle(false), appearance: "none", cursor: "pointer", color: st.form.service ? "#17181A" : "#8C8B85", backgroundImage: "none" },
+      pillArea: { ...pillStyle(false), borderRadius: 28, minHeight: 190, lineHeight: 1.5, resize: "vertical", fontFamily: "inherit" },
+      pillFocus: { borderColor: "#17181A", outline: "none" },
+      pillSubmit: {
+        width: "100%", padding: "22px 28px", border: "none", borderRadius: 999,
+        background: st.busy ? "#63625D" : "#17181A", color: "#fff", cursor: st.busy ? "default" : "pointer",
+        fontSize: 15, fontWeight: 600, letterSpacing: ".14em", textTransform: "uppercase",
+        transition: "background .16s cubic-bezier(.22,.61,.36,1)"
+      },
+      serviceHint: st.err.service ? ui.errService : "",
+      igUrl: "https://www.instagram.com/nordcreative.co", monoW: 52,
+      socials: ["WhatsApp", "Instagram", "LinkedIn"],
+      feed: Array.from({ length: 12 }, (_, i) => "Gönderi " + (i + 1)),
+      blockBtn: { display: "grid", width: "100%" },
+      heroProps: { style: { textTransform: "none", letterSpacing: "-.01em", fontSize: 17, fontWeight: 600 } },
+      heroPropsSm: { style: { textTransform: "none", letterSpacing: "-.01em", fontSize: 15, fontWeight: 600 } },
+      fill: { position: "absolute", inset: 0, height: "100%" },
+      cardFill: { display: "flex", flexDirection: "column", width: "100%", height: "100%", boxSizing: "border-box" },
+      isHome: st.page === "home", isServices: st.page === "services", isWork: st.page === "work",
+      isBlog: st.page === "blog", isContact: st.page === "contact", isAdmin: st.page === "admin",
+      goHome: this.go("home"), goServices: this.go("services"), goWork: this.go("work"),
+      goBlog: this.go("blog"), goContact: this.go("contact"), goAdmin: this.go("admin"),
+      nav: [
+        { label: ui.navHome, active: st.page === "home", go: this.go("home") },
+        { label: ui.navServices, active: st.page === "services", go: this.go("services") },
+        { label: ui.navWork, active: st.page === "work", go: this.go("work") },
+        { label: ui.navBlog, active: st.page === "blog", go: this.go("blog") },
+        { label: ui.navContact, active: st.page === "contact", go: this.go("contact") }
+      ],
+      setTR: () => this.setState({ lang: "tr" }), setEN: () => this.setState({ lang: "en" }),
+      trStyle: pill(st.lang === "tr"), enStyle: pill(st.lang === "en"),
+
+      stats: c.stats.map((x, i) => ({ ...x, shown: String(st.counts[i] != null ? st.counts[i] : 0) })),
+      serviceRows: c.services.map((s, i) => ({
+        ...s, n: String(i + 1).padStart(2, "0"), open: st.openService === i,
+        onEnter: () => this.setState({ openService: i })
+      })),
+      services: c.services.map((s, i) => ({ ...s, n: String(i + 1).padStart(2, "0") })),
+      notHome: st.page !== "home",
+      featured: c.projects.slice(0, 3).map((p, i) => ({
+        ...p, ratio: "1 / 1", label: p.client + " — " + p.type, cellStyle: "",
+        hover: st.hoverKey === "f" + i,
+        onEnter: () => this.setState({ hoverKey: "f" + i }),
+        onLeave: () => this.setState({ hoverKey: null })
+      })),
+      workGrid: decorate(shown, 0),
+      filters: cats.map((k) => ({
+        label: k === "all" ? ui.filterAll : k, style: chip(st.filter === k),
+        go: () => this.setState({ filter: k, hoverKey: null })
+      })),
+
+      mailHref: "mailto:" + c.contact.email,
+      form: st.form, err: st.err, busy: st.busy, sent: st.sent, notSent: !st.sent,
+      formError: st.formError,
+      hint: { name: st.err.name ? ui.errName : "", email: st.err.email ? ui.errEmail : "" },
+      msgCount: st.form.msg.length + " / 1000",
+      submitLabel: st.busy ? ui.submitBusy : ui.submit,
+      serviceOptions: c.services.map((s) => ({ value: s.title, label: s.title })),
+      onName: set("name"), onSurname: set("surname"), onEmail: set("email"), onPhone: set("phone"), onMsg: set("msg"),
+      onService: (e) => this.setState({ form: { ...st.form, service: e.target.value }, err: { ...st.err, service: false }, formError: "" }),
+      onHp: (e) => this.setState({ form: { ...st.form, hp: e.target.value } }),
+      onConsent: (e) => this.setState({ form: { ...st.form, consent: e.target.checked }, formError: "" }),
+      submit: (e) => this.submit(e),
+      resetForm: () => this.setState({ sent: false, form: { name: "", surname: "", email: "", phone: "", service: "", msg: "", consent: false, hp: "" }, err: {}, formError: "" }),
+
+      adminNav: [
+        { label: ui.aGeneral, style: tab(st.adminTab === "general"), go: () => this.setState({ adminTab: "general" }) },
+        { label: ui.aServices, style: tab(st.adminTab === "services"), go: () => this.setState({ adminTab: "services" }) },
+        { label: ui.aWork, style: tab(st.adminTab === "work"), go: () => this.setState({ adminTab: "work" }) },
+        { label: ui.aBlog, style: tab(st.adminTab === "blog"), go: () => this.setState({ adminTab: "blog" }) },
+        { label: ui.aContact, style: tab(st.adminTab === "contact"), go: () => this.setState({ adminTab: "contact" }) }
+      ],
+      adminHeading, adminFields, adminRows, adminList, addRow, addLabel,
+      saveNote: st.dirty ? ui.unsaved : st.savedAt ? ui.saved + " · " + st.savedAt : ui.saved,
+      publish: () => {
+        try { localStorage.setItem("nord.cms.v1", JSON.stringify(st.data)); } catch (e) {}
+        this.setState({ dirty: false, savedAt: new Date().toLocaleTimeString(st.lang === "tr" ? "tr-TR" : "en-GB", { hour: "2-digit", minute: "2-digit" }) });
+      },
+      resetCms: () => {
+        try { localStorage.removeItem("nord.cms.v1"); } catch (e) {}
+        this.setState({ data: clone(DEFAULTS), dirty: false, savedAt: null });
+      }
+    };
+  }
+}
+
+</script>
+</body>
+</html>

@@ -1,0 +1,11 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..700;1,400..600&display=swap");
+@font-face{font-family:"Saldo";font-style:normal;font-weight:200;font-display:swap;src:url("../assets/fonts/saldo-extra-light.ttf") format("truetype")}
+@font-face{font-family:"Saldo";font-style:normal;font-weight:300;font-display:swap;src:url("../assets/fonts/saldo-light.ttf") format("truetype")}
+@font-face{font-family:"Saldo";font-style:normal;font-weight:400;font-display:swap;src:url("../assets/fonts/saldo-regular.ttf") format("truetype")}
+@font-face{font-family:"Saldo";font-style:italic;font-weight:400;font-display:swap;src:url("../assets/fonts/saldo-regular-italic.ttf") format("truetype")}
+@font-face{font-family:"Saldo";font-style:normal;font-weight:500;font-display:swap;src:url("../assets/fonts/saldo-medium.ttf") format("truetype")}
+@font-face{font-family:"Saldo";font-style:normal;font-weight:600;font-display:swap;src:url("../assets/fonts/saldo-semi-bold.ttf") format("truetype")}
+@font-face{font-family:"Saldo";font-style:normal;font-weight:700;font-display:swap;src:url("../assets/fonts/saldo-bold.ttf") format("truetype")}
+@font-face{font-family:"Saldo";font-style:italic;font-weight:700;font-display:swap;src:url("../assets/fonts/saldo-bold-italic.ttf") format("truetype")}
+@font-face{font-family:"Saldo";font-style:normal;font-weight:800;font-display:swap;src:url("../assets/fonts/saldo-extra-bold.ttf") format("truetype")}
+/* Accent serif: Playfair Display (Google Fonts) stands in for the light didone serif in the "creative.co" wordmark. Substitution — see readme.md. */

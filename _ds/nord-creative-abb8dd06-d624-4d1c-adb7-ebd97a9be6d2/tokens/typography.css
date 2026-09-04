@@ -1,0 +1,60 @@
+:root{
+--font-display:"Saldo","Helvetica Neue",Arial,sans-serif;
+--font-body:"Saldo","Helvetica Neue",Arial,sans-serif;
+--font-accent:"Playfair Display",Georgia,serif;
+
+--weight-extralight:200;
+--weight-light:300;
+--weight-regular:400;
+--weight-medium:500;
+--weight-semibold:600;
+--weight-bold:700;
+--weight-extrabold:800;
+
+/* Editorial display scale — social-first, big steps */
+--text-mega:180px;
+--text-mega-fluid:clamp(64px,11vw,180px);
+--text-display-1:96px;
+--text-display-2:72px;
+--text-display-3:56px;
+--text-headline:40px;
+--text-title:30px;
+--text-subtitle:24px;
+--text-body-lg:20px;
+--text-body:17px;
+--text-body-sm:15px;
+--text-caption:13px;
+--text-micro:11px;
+
+--leading-tight:.92;
+--leading-display:1.02;
+--leading-snug:1.18;
+--leading-body:1.45;
+--leading-loose:1.6;
+
+--tracking-mega:-.045em;
+--tracking-display:-.03em;
+--tracking-tight:-.015em;
+--tracking-normal:0;
+--tracking-label:.16em;
+--tracking-wide:.28em;
+}
+
+/* Canvas scope: 1080px social canvases need UI text at ~1.75x screen size.
+   PostCanvas / StoryCanvas carry .nord-canvas, so every component inside inherits these. */
+.nord-canvas{
+--text-micro:22px;
+--text-caption:24px;
+--text-body-sm:26px;
+--text-body:30px;
+--text-body-lg:34px;
+--text-subtitle:42px;
+--text-title:52px;
+--text-headline:70px;
+--text-display-3:96px;
+--text-display-2:124px;
+--text-display-1:164px;
+--control-sm:60px;
+--control-md:80px;
+--control-lg:108px;
+}

@@ -1,0 +1,9 @@
+body{font-family:var(--font-body);color:var(--text-primary);background:var(--surface-paper);-webkit-font-smoothing:antialiased}
+a{color:var(--link);text-decoration:none}
+a:hover{color:var(--link-hover);text-decoration:underline;text-underline-offset:3px}
+::selection{background:var(--nord-red);color:var(--nord-white)}
+.nord-eyebrow{font-size:var(--text-micro);font-weight:var(--weight-semibold);letter-spacing:var(--tracking-label);text-transform:uppercase}
+.nord-display{font-family:var(--font-display);font-weight:var(--weight-extrabold);letter-spacing:var(--tracking-display);line-height:var(--leading-display)}
+/* Italic is reserved for the accent line of a pullquote. Never body copy. */
+.nord-accent-italic{font-family:var(--font-accent);font-style:italic;font-weight:var(--weight-regular);letter-spacing:var(--tracking-normal)}
+.nord-rule-accent{display:block;width:96px;height:2px;background:var(--nord-red)}

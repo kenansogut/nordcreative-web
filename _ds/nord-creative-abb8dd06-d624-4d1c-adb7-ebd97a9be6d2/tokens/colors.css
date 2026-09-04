@@ -1,0 +1,45 @@
+:root{
+/* Brand core — sampled from the Nord Creative logo artwork */
+--nord-red:#EF3E36;
+--nord-red-deep:#C92A23;
+--nord-red-tint:#FBD8D6;
+--nord-ink:#17181A;
+--nord-coal:#232528;
+--nord-paper:#F2F1ED;
+--nord-white:#FFFFFF;
+
+/* Neutral scale, warm-shifted to sit with the paper tone */
+--grey-100:#E6E5E0;
+--grey-200:#D2D1CB;
+--grey-300:#B3B2AC;
+--grey-400:#8C8B85;
+--grey-500:#63625D;
+--grey-600:#3D3E40;
+
+/* Semantic surfaces */
+--surface-paper:var(--nord-paper);
+--surface-white:var(--nord-white);
+--surface-ink:var(--nord-ink);
+--surface-coal:var(--nord-coal);
+/* Accent is for CTAs and small marks only — never a full canvas or story background. */
+--surface-accent:var(--nord-red);
+--surface-muted:var(--grey-100);
+
+/* Semantic text */
+--text-primary:var(--nord-ink);
+--text-secondary:var(--grey-500);
+--text-muted:var(--grey-400);
+--text-inverse:var(--nord-white);
+--text-accent:var(--nord-red);
+--text-on-accent:var(--nord-white);
+
+/* Lines & strokes */
+--border-hairline:rgba(23,24,26,.14);
+--border-strong:var(--nord-ink);
+--border-inverse:rgba(255,255,255,.28);
+--border-accent:var(--nord-red);
+
+/* Link defaults */
+--link:var(--nord-red);
+--link-hover:var(--nord-red-deep);
+}
